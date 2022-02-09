@@ -1,5 +1,5 @@
 
-class GildedRoseApp(object):
+class GildedRose(object):
     '''
         This app is used to update the item properties.
     '''

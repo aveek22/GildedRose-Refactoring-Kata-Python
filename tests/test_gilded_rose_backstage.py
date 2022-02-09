@@ -1,6 +1,6 @@
 import unittest
 
-from app.gilded_rose_app import GildedRoseApp
+from app.gilded_rose import GildedRose
 from app.products import Product
 
 product = Product()
@@ -11,7 +11,7 @@ class GildedRoseAppBrieTest(unittest.TestCase):
 
     def test_regular_item_before_sell_in(self):
         items = [product.create(name="Aged Brie", sell_in=2, quality=0)]
-        gilded_rose = GildedRoseApp(items)
+        gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
         self.assertEqual("Aged Brie", items[0].name)
         self.assertEqual(1, items[0].sell_in)
