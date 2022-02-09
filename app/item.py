@@ -23,7 +23,8 @@ class Item:
         
     def update(self):
         ''' Updates the sell in days and quality of the item '''
-        pass
+        self._update_sell_in()
+        self.quality = self._update_quality(self.sell_in)
 
     def _update_sell_in(self):
         ''' Decreases the sell in days by 1 '''
