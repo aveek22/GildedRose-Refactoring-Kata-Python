@@ -1,12 +1,12 @@
-from item import Item
-from product_list import ProductList
+from app.item import Item
+from app.product_list import ProductList
 
 
 class Product:
     ''' Checks the item that needs to be created. '''
     
     @staticmethod
-    def create(self, name, sell_in, quality):
+    def create(name, sell_in, quality):
 
         if name == ProductList.AGED_BRIE.value:
             return AgedBrie(name, sell_in, quality)

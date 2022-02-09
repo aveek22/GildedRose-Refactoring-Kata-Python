@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class ProductList:
+class ProductList(Enum):
     '''
     This class defines the available products that can be used to 
     update the inventory.
