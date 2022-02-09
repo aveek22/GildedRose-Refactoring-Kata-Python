@@ -1,22 +1,15 @@
-from products import Products
-
-# The Quality of an item is never negative
-# The Quality of an item is never more than 50
-# "Sulfuras" is a legendary item and as such its Quality is 80 and it never alters.
-
-MIN_QUALITY = 0
-MAX_QUALITY = 50
-LEG_MAX_QUALITY = 80
-MIN_SELL_IN = 0
-
-
-class ItemCheck:
-    ''' Checks the item that needs to be created. '''
-    pass
-
 
 class Item:
     ''' Describes the specific item instance. '''
+
+    # The Quality of an item is never negative
+    # The Quality of an item is never more than 50
+    # "Sulfuras" is a legendary item and as such its Quality is 80 and it never alters.
+
+    MIN_QUALITY = 0
+    MAX_QUALITY = 50
+    LEG_MAX_QUALITY = 80
+    MIN_SELL_IN = 0
 
     def __init__(self, _name, _sell_in, _quality):
         '''
@@ -44,6 +37,6 @@ class Item:
             - quality can never be less than 0
         '''
         if sell_in >= 0:
-            return max(self.quality - 1, MIN_QUALITY)
+            return max(self.quality - 1, self.MIN_QUALITY)
         else:
-            return max(self.quality - 2, MIN_QUALITY)
+            return max(self.quality - 2, self.MIN_QUALITY)

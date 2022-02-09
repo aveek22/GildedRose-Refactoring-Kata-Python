@@ -1,14 +1,22 @@
-from enum import Enum
+from item import Item
 
 
-class Products:
-    '''
-    This class defines the available products that can be used to 
-    update the inventory.
-    '''
+class ItemCheck:
+    ''' Checks the item that needs to be created. '''
+    pass
 
-    AGED_BRIE = "Aged Brie"
-    BACKSTAGE_PASS = "BackStage Passes to a TAFKAL80ETC concert"
-    SULFURUS = "Sulfuras, Hand of Ragnaros"
-    CONJURED = "Conjured Mana Cake"
-    
+
+class AgedBrie(Item):
+    pass
+
+
+class BackstagePasses(Item):
+    pass
+
+
+class Sulfuras(Item):
+    pass
+
+
+class Conjured(Item):
+    pass
