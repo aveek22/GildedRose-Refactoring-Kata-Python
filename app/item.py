@@ -20,6 +20,9 @@ class Item:
         self.name = _name
         self.sell_in = _sell_in
         self.quality = _quality
+
+    def __repr__(self):
+        return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
         
     def update(self):
         ''' Updates the sell in days and quality of the item '''
