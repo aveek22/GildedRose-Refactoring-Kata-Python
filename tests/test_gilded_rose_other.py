@@ -7,15 +7,23 @@ product = Product()
 
 
 class GildedRoseAppBrieTest(unittest.TestCase):
-    ''' Tests for Aged Brie products '''
+    ''' Tests for Other products '''
 
-    def test_regular_item_before_sell_in(self):
-        items = [product.create(name="Aged Brie", sell_in=2, quality=0)]
+    def test_other_1(self):
+        items = [product.create(name="+5 Dexterity Vest", sell_in=20, quality=10)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
-        self.assertEqual("Aged Brie", items[0].name)
-        self.assertEqual(1, items[0].sell_in)
-        self.assertEqual(2, items[0].quality)
+        self.assertEqual("+5 Dexterity Vest", items[0].name)
+        self.assertEqual(19, items[0].sell_in)
+        self.assertEqual(9, items[0].quality)
+
+    def test_other_2(self):
+        items = [product.create(name="Elixir of the Mongoose", sell_in=8, quality=16)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual("Elixir of the Mongoose", items[0].name)
+        self.assertEqual(7, items[0].sell_in)
+        self.assertEqual(15, items[0].quality)
 
 
 if __name__ == '__main__':
