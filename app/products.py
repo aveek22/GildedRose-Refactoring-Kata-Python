@@ -82,6 +82,8 @@ class Conjured(Item):
     def _update_quality(self, sell_in):
         if self.quality < 0:
             return Item.MIN_QUALITY
+        elif self.quality > 50:
+            return Item.MAX_QUALITY
 
         if sell_in >= 0:
             return max(self.quality - 2, Item.MIN_QUALITY)
