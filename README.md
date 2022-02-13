@@ -83,7 +83,11 @@ My approach to implement and refactor the program would be as follows.
     ```bash
     python -m venv .venv
     source .venv/bin/activate
+    ```
+
+    ```bash
     pip install --upgrade pip
+    pip install -r requirements.txt
     ```
     
     This will start the virtual environment and update the pip. Once the virtual environment is up and running, the test cases can be executed from the terminal as follows.
