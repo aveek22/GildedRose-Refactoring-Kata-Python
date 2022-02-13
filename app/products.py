@@ -3,7 +3,7 @@ from app.product_list import ProductList
 
 
 class Product:
-    ''' Checks the item that needs to be created. '''
+    """ Checks the item that needs to be created. """
     
     @staticmethod
     def create(name, sell_in, quality):
@@ -25,9 +25,9 @@ class Product:
 
 
 class AgedBrie(Item):
-    '''
+    """
     "Aged Brie" actually increases in Quality the older it gets
-    '''
+    """
     def _update_quality(self, sell_in):
         if self.quality < 0:
             return Item.MIN_QUALITY
@@ -39,13 +39,13 @@ class AgedBrie(Item):
 
 
 class BackstagePass(Item):
-    '''
+    """
     "Backstage passes", like aged brie, increases in Quality as its SellIn value approaches;
     Quality changes as follows:
         - 2 when sell_in value is 10 days or less
         - 3 when sell_in value is 5 days or less
         - 0 when sell_in value is 0
-    '''
+    """
     def _update_quality(self, sell_in):
         if sell_in > 10:
             return min(self.quality + 1, Item.MAX_QUALITY)
@@ -58,10 +58,10 @@ class BackstagePass(Item):
 
 
 class Sulfuras(Item):
-    '''
+    """
         - "Sulfuras" is a legendary item and as such its Quality is 80 and it never alters.
         - "Sulfuras", being a legendary item, never has to be sold or decreases in Quality.
-    '''
+    """
     def _update_quality(self, sell_in):
         if self.quality < Item.LEG_MAX_QUALITY:
             return Item.LEG_MAX_QUALITY
@@ -73,12 +73,12 @@ class Sulfuras(Item):
 
 
 class Conjured(Item):
-    '''
+    """
     "Conjured" items degrade in Quality twice as fast as normal items
     Quality decreases as follows:
         - 2 when sell_in date is more than equal 0
         - 4 when sell_in date is less than 0
-    '''
+    """
     def _update_quality(self, sell_in):
         if self.quality < 0:
             return Item.MIN_QUALITY

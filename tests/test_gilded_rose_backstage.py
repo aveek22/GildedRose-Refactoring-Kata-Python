@@ -7,7 +7,7 @@ product = Product()
 
 
 class GildedRoseBackstageTest(unittest.TestCase):
-    ''' Tests for Backstage Pass products '''
+    """ Tests for Backstage Pass products """
 
     def test_backstage_sell_in_12(self):
         items = [product.create(name="BackStage Passes to a TAFKAL80ETC concert", sell_in=12, quality=10)]

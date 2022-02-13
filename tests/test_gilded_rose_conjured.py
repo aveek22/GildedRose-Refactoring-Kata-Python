@@ -7,7 +7,7 @@ product = Product()
 
 
 class GildedRoseConjuredTest(unittest.TestCase):
-    ''' Tests for Conjured products '''
+    """ Tests for Conjured products """
 
     def test_conjured_before_sell_in(self):
         items = [product.create(name="Conjured Mana Cake", sell_in=2, quality=10)]

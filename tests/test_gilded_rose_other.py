@@ -7,7 +7,7 @@ product = Product()
 
 
 class GildedRoseAppBrieTest(unittest.TestCase):
-    ''' Tests for Other products '''
+    """ Tests for Other products """
 
     def test_other_1(self):
         items = [product.create(name="+5 Dexterity Vest", sell_in=20, quality=10)]

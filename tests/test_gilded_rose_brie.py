@@ -7,7 +7,7 @@ product = Product()
 
 
 class GildedRoseBrieTest(unittest.TestCase):
-    ''' Tests for Aged Brie products '''
+    """ Tests for Aged Brie products """
 
     def test_brie_before_sell_in(self):
         items = [product.create(name="Aged Brie", sell_in=5, quality=4)]

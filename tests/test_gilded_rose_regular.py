@@ -7,7 +7,7 @@ product = Product()
 
 
 class GildedRoseRegularTest(unittest.TestCase):
-    ''' Test for Regular Items '''
+    """ Test for Regular Items """
 
     def test_regular_item_before_sell_in(self):
         items = [product.create(name="Regular Product", sell_in=5, quality=6)]

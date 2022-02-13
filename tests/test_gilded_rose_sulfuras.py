@@ -7,7 +7,7 @@ product = Product()
 
 
 class GildedRoseSulfurasTest(unittest.TestCase):
-    ''' Tests for Sulfuras products '''
+    """ Tests for Sulfuras products """
 
     def test_sulfuras_before_sell_in(self):
         items = [product.create(name="Sulfuras, Hand of Ragnaros", sell_in=5, quality=80)]
