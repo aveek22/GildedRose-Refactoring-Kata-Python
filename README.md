@@ -67,12 +67,13 @@ My approach to implement and refactor the program would be as follows.
     
     In order to validate the existing logic and new business rules, several unit test cases have been written which are found under the `tests` directory. It contains several test files as follows.
     
-    | Test cases for regular products | test_gilded_rose_regular.py |
+    | Specification | Test Files |
     | --- | --- |
+    | Test cases for regular products | test_gilded_rose_regular.py |
     | Test cases for specific products | test_gilded_rose_brie.py
-    test_gilded_rose_backstage.py
-    test_gilded_rose_sulfuras.py
-    test_gilded_rose_conjured.py |
+    | Test cases for specific products | test_gilded_rose_backstage.py
+    | Test cases for specific products | test_gilded_rose_sulfuras.py
+    | Test cases for specific products | test_gilded_rose_conjured.py |
     | Test for other products | test_gilded_rose_other.py |
     
     ## Executing the test cases
@@ -100,3 +101,15 @@ My approach to implement and refactor the program would be as follows.
     ![Fig - Execution of test cases from VSCode](assets/tests_vscode.png)
     
     Fig - Execution of test cases from VSCode
+
+    ## Executing the TextTest_Fixture
+
+    A `texttest_fixture.py` file is provided that can be executed from the terminal with an optional argument for `days`. By default, the values for `days` is set to be 5. This will return a set of values for each day for all the products available.
+    
+    ```bash
+    python texttest_fixture.py
+    ```
+
+    ![Fig - Execution of test cases from VSCode](assets/texttest_fixture.png)
+
+    Fig - Execution of texttest_fixture.py
