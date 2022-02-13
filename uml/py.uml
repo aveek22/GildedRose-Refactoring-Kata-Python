@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#/Users/aveek/codebase/temp/GildedRose-Refactoring-Kata-Python/app/products.py</OriginalElement>
+  <nodes>
+    <node x="756.0" y="346.0">app.products.Sulfuras</node>
+    <node x="283.0" y="357.0">app.products.Conjured</node>
+    <node x="519.0" y="357.0">app.products.AgedBrie</node>
+    <node x="370.25" y="0.0">app.item.Item</node>
+    <node x="23.5" y="0.0">app.products.Product</node>
+    <node x="0.0" y="357.0">app.products.BackstagePass</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="app.products.Sulfuras" target="app.item.Item" relationship="REALIZATION">
+      <point x="0.0" y="-37.5" />
+      <point x="864.0" y="317.5" />
+      <point x="509.25" y="317.5" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="app.products.Conjured" target="app.item.Item" relationship="REALIZATION">
+      <point x="0.0" y="-26.5" />
+      <point x="391.0" y="337.0" />
+      <point x="509.25" y="337.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="app.products.BackstagePass" target="app.item.Item" relationship="REALIZATION">
+      <point x="0.0" y="-26.5" />
+      <point x="131.5" y="337.0" />
+      <point x="509.25" y="337.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="app.products.AgedBrie" target="app.item.Item" relationship="REALIZATION">
+      <point x="0.0" y="-26.5" />
+      <point x="627.5" y="337.0" />
+      <point x="509.25" y="337.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="486.0" y="259.5" />
+  <SelectedNodes>
+    <node>app.products.Product</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+</Diagram>
+
