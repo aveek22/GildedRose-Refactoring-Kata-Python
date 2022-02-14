@@ -32,10 +32,7 @@ class AgedBrie(Item):
         if self.quality < 0:
             return Item.MIN_QUALITY
 
-        if sell_in >= 0 and self.quality > 0:
-            return min(self.quality + 1, Item.MAX_QUALITY)
-        else:
-            return min(self.quality + 2, Item.MAX_QUALITY)
+        return min(self.quality + 1, Item.MAX_QUALITY)
 
 
 class BackstagePass(Item):

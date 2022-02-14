@@ -23,7 +23,7 @@ class GildedRoseBrieTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEqual("Aged Brie", items[0].name)
         self.assertEqual(-1, items[0].sell_in)
-        self.assertEqual(6, items[0].quality)
+        self.assertEqual(5, items[0].quality)
 
     def test_brie_after_sell_in(self):
         items = [product.create(name="Aged Brie", sell_in=-5, quality=2)]
@@ -31,7 +31,7 @@ class GildedRoseBrieTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEqual("Aged Brie", items[0].name)
         self.assertEqual(-6, items[0].sell_in)
-        self.assertEqual(4, items[0].quality)
+        self.assertEqual(3, items[0].quality)
 
     def test_brie_zero_quality(self):
         items = [product.create(name="Aged Brie", sell_in=5, quality=0)]
@@ -39,7 +39,7 @@ class GildedRoseBrieTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEqual("Aged Brie", items[0].name)
         self.assertEqual(4, items[0].sell_in)
-        self.assertEqual(2, items[0].quality)
+        self.assertEqual(1, items[0].quality)
 
     def test_brie_max_quality(self):
         items = [product.create(name="Aged Brie", sell_in=5, quality=50)]
